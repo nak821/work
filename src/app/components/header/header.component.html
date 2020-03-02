@@ -1,0 +1,35 @@
+<div style="height: 80vh;">
+    <mat-toolbar color="primary">
+      <mat-toolbar-row>
+        <button mat-icon-button (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm>
+          <mat-icon>menu</mat-icon>
+        </button>
+        <a href="/"><img src="https://angular.io/assets/images/logos/angular/logo-nav@2x.png" title="Home" alt="Home" class="ng-star-inserted" width="150" height="40"><!----><!----></a>
+        <span class="menu-spacer"></span>
+        <div fxShow="true" fxHide.lt-md style="margin-right: 200px;">
+          <!-- The following menu items will be hidden on both SM and XS screen sizes -->
+          <a routerLink="/" mat-button>Home</a>
+          <a routerLink="/about" mat-button>Online Form</a>
+          <a routerLink="/about" mat-button>About</a>
+          <a routerLink="/about" mat-button>Contact</a>
+          <a routerLink="/about" mat-button>Gallery</a>
+          
+        </div>
+      </mat-toolbar-row>
+    </mat-toolbar>
+  
+    <mat-sidenav-container fxFlexFill>
+      <mat-sidenav #sidenav>
+        <mat-nav-list>
+          <!-- <a (click)="sidenav.toggle()" href="" mat-list-item>Close</a> -->
+          <a routerLink="/about" mat-list-item>Home</a>
+          <a routerLink="/about" mat-list-item>Online Form</a>
+          <a routerLink="/about" mat-list-item>About</a>
+          <a routerLink="/about" mat-list-item>Contact</a>
+          <a routerLink="/about" mat-list-item>Gallery</a>
+        </mat-nav-list>
+      </mat-sidenav>
+      <mat-sidenav-content fxFlexFill>Main content</mat-sidenav-content>
+    </mat-sidenav-container>
+  </div>
+  
